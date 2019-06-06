@@ -1,0 +1,31 @@
+
+.progressive {
+    overflow: hidden;
+    outline: none;
+    /*四周的边框*/
+}
+
+.progressive img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border: 0 none;
+    will-change: opacity, filter, transform;
+}
+
+.progressive img.preview {
+    opacity: 0.25;
+    filter: blur(2vw);
+    transform: scale(1.05);
+}
+
+.progressive img.reveal {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    transition: transform 1s ease-out, opacity 1s linear;
+}
+
+
+

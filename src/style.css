@@ -1,0 +1,141 @@
+/**{*/
+    /*font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;*/
+/*}*/
+
+.section {
+    min-width: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(180deg, #053f65, #648692 );
+    /*padding: 10px 0;*/
+    z-index: 10;
+
+}
+
+.nav-header {
+    display: flex;
+    font-size: 25px;
+    color: whitesmoke;
+    padding: 10px 16px;
+
+}
+
+#github {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+
+#github a{
+    display: block;
+    height: 100%;
+    background: url("./img/github.png") center center / 100% 100% no-repeat;
+    background-size: 100% 100%;
+}
+
+#hamburger {
+    display: none;
+    margin-left: auto;
+    padding: 10px 0;
+}
+
+#hamburger .line {
+    width: 28px;
+    height: 2px;
+    background: whitesmoke;
+    margin-bottom: 8px;
+    transition: all ease 0.5s;
+    transform-origin: 28px;
+}
+
+/*点击菜单栏的动画效果*/
+
+#hamburger.transFormed .line:first-child{
+    transform: rotate(-45deg);
+}
+
+#hamburger.transFormed .line:nth-child(2) {
+    width: 0;
+}
+
+#hamburger.transFormed .line:last-child {
+    transform: rotate(45deg);
+}
+
+.section-body {
+    padding-top: .5rem;
+}
+
+.right {
+    float: right;
+}
+
+.item {
+    padding-right: 140px;
+}
+
+.separate{
+    border-bottom: 1px solid cadetblue;
+    padding: .5rem 0;
+}
+
+.separate:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.label {
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    width: 7rem;
+}
+
+.content {
+    display: inline-block;
+    max-width: calc(95% - 7rem);
+    /*动态计算长度的函数，运算符前后都需要保留一个空格*/
+}
+
+.list {
+    margin: 0;
+}
+
+.link {
+    color: #195a82;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #github {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    .label {
+        width: 100%;
+    }
+    .content {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+

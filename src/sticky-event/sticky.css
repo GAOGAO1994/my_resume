@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.6;
+    color: #78909c;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    min-width: 60%;
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+a {
+    color: inherit;
+}
+
+h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 300;
+    color: #546E7A;
+}
+
+h2 {
+    font-size: 28px;
+    color: whitesmoke;
+}
+
+#container {
+    width: 80%;
+    padding: 16px;
+    background-color: #ECEFF1;
+}
+
+.sticky {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 1;
+    /* Sentinels adjust based on this position. */
+    height: 45px;
+    background-color: #648692;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    /*line-height: 45px;*/
+}
+
+.subject {
+    margin-bottom: calc(16px * 2);
+    padding: 60px 16px 16px;
+    position: relative;
+    background-color: #fff;
+}
+
+.shadow {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
+}
+
+main {
+    padding-top: 60px;
+}
+
+#toc {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    /*width: auto;*/
+    z-index: 2;
+    background: #fff;
+    border: 1px solid #ECEFF1;
+    padding: 16px 24px;
+    font-size: 14px;
+}
+#toc ul {
+    margin: 0;
+    padding: 0;
+}
+#toc li {
+    list-style: none;
+}
+#toc .toc-item ul {
+    margin-left: 16px;
+    transition: height 150ms ease-in-out ;
+    overflow: hidden;
+}
+
+.toc-title {
+    /*定义文本的转换格式，uppercase：只有大写*/
+    text-transform: uppercase;
+    /*text-decoration: none;*/
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: calc(16px / 2);
+}
+#toc .toc-item a {
+    position: relative;
+    text-decoration: none;
+}
+
+/*到达选区范围时，通过js控制*/
+#toc .toc-item.active a {
+    font-weight: bold;
+}
+
+#toc .toc-item.active h4::before {
+    content: ">";
+    position: absolute;
+    left: calc(-1 * var(--indent));
+    bottom: -3px;
+    font-size: 20px;
+}
+
+#toc .toc-item.active ul {
+    height: 90px;
+}
+
+#toc .toc-item ul {
+    height: 0;
+}
+
+header {
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 100%;
+    }
+    #toc {
+        position: fixed;
+        top: 60px;
+        left: 0 !important;
+        right: 0;
+        width: auto;
+    }
+}
+

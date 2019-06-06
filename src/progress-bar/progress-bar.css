@@ -1,0 +1,48 @@
+.progress {
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    width: 50%;
+    margin-right: 2em;
+    vertical-align: middle;
+    border: #132b57 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress .level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    height: 10px;
+    background: cadetblue;
+    transition: width 1s ease;
+    border-radius: 10px;
+}
+
+.progress-active .level1 {
+    width: 30%;
+}
+
+.progress-active .level2 {
+    width: 50%;
+}
+
+.progress-active .level3 {
+    width: 80%;
+}
+
+.progress-active .level4 {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .progress {
+        width: 60%;
+    }
+    .with-progress .content{
+        max-width: 35%;
+    }
+}
