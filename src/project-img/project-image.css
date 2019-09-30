@@ -1,0 +1,6 @@
+.project-img {
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    z-index: 1000;
+}
